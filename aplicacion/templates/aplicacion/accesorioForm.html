@@ -1,0 +1,14 @@
+{% extends 'aplicacion/base.html' %} 
+{% load static %} 
+{% block titulo %}Accesorios{% endblock titulo %} 
+{% block cabecera %}Accesorios {% endblock cabecera %} 
+{% block contenido %}
+    <h2>Accesorio</h2>
+    <form action="" method="POST">
+        {% csrf_token %} 
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}
